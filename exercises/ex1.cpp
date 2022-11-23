@@ -36,4 +36,5 @@ int main(){
     cout<<"sorted :: \n";
     for(long v:numbers)
         cout<<v<<" ";
+    cout<<endl;
 }
