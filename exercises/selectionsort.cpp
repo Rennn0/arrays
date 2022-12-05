@@ -1,7 +1,10 @@
+
+// iter_swap magivrad shemedzlo chemive func shemeqmna swapistvis
+
 #include <iostream>
 #include <random>
 using namespace std;
-#define max 20000
+#define max 20
 
 random_device rnd;
 default_random_engine gen(rnd());
@@ -13,28 +16,26 @@ void sel_sor(int*);
 
 int main()
 {
-    // fill(array);
-    int arr[]={5,4,6,0,1,7};
+    fill(array);
+    sel_sor(array);
     
-    sel_sor(arr);
-    
-    for(auto v:arr)
+    for(auto v:array)
         cout<<v<<" ";
 }
 
-// void fill(int* arr)
-// {
-//     for(size_t  t=0;t<max;++t)
-//         *(arr+t)=dis(gen);
-// }
+void fill(int* arr)
+{
+    for(size_t  t=0;t<max;++t)
+        *(arr+t)=dis(gen);
+}
 
 void sel_sor(int*arr)
 {
     int min;
 
-    for(size_t t=0;t<4;t++)
+    for(size_t t=0;t<max;t++)
     {
-        for(size_t m=0;t+m<4;m++)
+        for(size_t m=0;t+m<max;m++)
         {
             if(*(arr+t+m)<*(arr+t))
             {
