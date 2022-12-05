@@ -8,7 +8,7 @@ argv the array elements are char pointers to the environme tstring the last elem
 #include <iostream>
 using namespace std;
 
-int main(int argc, char* argv[], char* argenv[])
+int main(int argc, char** argv, char** argenv)
 {
     
 
